@@ -303,6 +303,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_panel_admin_panel_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin-panel/admin-panel.component */ "./src/app/admin-panel/admin-panel.component.ts");
 /* harmony import */ var _create_account_popup_create_account_popup_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./create-account-popup/create-account-popup.component */ "./src/app/create-account-popup/create-account-popup.component.ts");
 /* harmony import */ var _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./page-not-found/page-not-found.component */ "./src/app/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
 
 
 
@@ -348,7 +350,7 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([])
             ],
-            providers: [],
+            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_19__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_19__["PathLocationStrategy"] }],
             bootstrap: [
                 _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]
             ],
