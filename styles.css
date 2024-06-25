@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Tektur';
+    src: url('./fonts/Tektur-VariableFont.ttf')  format('truetype');
+}
+
+body {
+    background-color: #101010;
+    margin: 0;
+    font-family: 'Tektur', sans-serif;
+}
+
+.centered {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#container {
+    width: 768px;
+    height: 768px;
+    top:65px;
+}
+
+#status_label {
+    position: absolute;
+    top: 768px;
+    width: 768px;
+    color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    pointer-events: none;
+}
+
+#drawing_canvas {
+    position: absolute;
+}
+
+.check-boxes {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: #fbff00;
+    cursor: pointer;
+    font-family: 'Tektur', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    padding: 8px;
+}
+
+button:hover {
+    background-color: #fbff00a0;
+}
+
+button:active {
+    background-color: #fbff00f0;
+}

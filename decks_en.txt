@@ -1,0 +1,8 @@
+var decksEng = [
+'Graveyard Overdrive',
+'Deadly Disguise (Зеленые Морфы)',
+'Most Wanted (Оливия)',
+'Hail, Caesar (Цезарь)',
+"Legends' Legacy (Легендарки)",
+'Enhanced Evolution (Мутации)'
+];
