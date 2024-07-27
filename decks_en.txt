@@ -4,5 +4,9 @@ var decksEng = [
 'Most Wanted (Оливия)',
 'Hail, Caesar (Цезарь)',
 "Legends' Legacy (Легендарки)",
-'Enhanced Evolution (Мутации)'
+'Enhanced Evolution (Мутации)',
+'Ahoy Mateys (Пираты)',
+'Explorers of the Deep (Мерфолки)',
+'The Ruinous Powers (Каскадеры)',
+'Hydras (Гидры) *Constracted'
 ];
