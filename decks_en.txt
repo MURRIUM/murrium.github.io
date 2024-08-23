@@ -1,5 +1,5 @@
 var decksEng = [
-'Graveyard Overdrive',
+'Graveyard Overdrive (Лиргойфы)',
 'Deadly Disguise (Зеленые Морфы)',
 'Most Wanted (Оливия)',
 'Hail, Caesar (Цезарь)',
@@ -8,5 +8,6 @@ var decksEng = [
 'Ahoy Mateys (Пираты)',
 'Explorers of the Deep (Мерфолки)',
 'The Ruinous Powers (Каскадеры)',
-'Hydras (Гидры) *Constracted'
+'Hydras (Гидры) *Constracted',
+'Mr. House's Lucky 38 (Казиныч) *Constracted'
 ];
