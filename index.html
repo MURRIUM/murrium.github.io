@@ -7,6 +7,8 @@
     <script src="decks_en.txt"></script>
     <script src="decks_ru.txt"></script>
     <script src="decks_with_rofls.txt"></script>
+    <script src="luck_items.txt"></script>
+    <script src="upkeep_luck.txt"></script>
     <title>Choose Your Deck</title>
   </head>
   <body>
@@ -16,14 +18,29 @@
     </div>
     <div class="input-container">
         <form class="check-boxes">
-            <label >
+            <!-- <label >
               <input id="isRofls" type="checkbox" onclick="redraw()">
               Рофляные Деки
+            </label>
+            <br> -->
+            <label >
+              <input id="isRuDecks" type="checkbox" onclick="redraw()">
+              Русские
             </label>
             <br>
             <label>
               <input id="isEndDecks" type="checkbox" onclick="redraw()">
               Английские
+            </label>
+            <br>
+            <label>
+              <input id="isLuckItems" type="checkbox" onclick="redraw()">
+              Баффы/Дебаффы
+            </label>
+            <br>
+            <label>
+              <input id="isUpkeepLuckItems" type="checkbox" onclick="redraw()">
+              Шаг поддержки
             </label>
             <br>
           </form>

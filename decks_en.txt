@@ -9,5 +9,7 @@ var decksEng = [
 'Explorers of the Deep (Мерфолки)',
 'The Ruinous Powers (Каскадеры)',
 'Hydras (Гидры) *Constracted',
-'Mr. House\'s Lucky 38 (Казиныч) *Constracted'
+'Mr. House\'s Lucky 38 (Казиныч) *Constracted',
+'Food and Fellowship (Хоббиты)',
+'Riders of Rohan'
 ];

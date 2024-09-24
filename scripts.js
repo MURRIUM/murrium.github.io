@@ -36,20 +36,42 @@ var statusLabel = document.getElementById('status_label');
 
  var randoms=new Array();
 
- var decksQuantity = decksEng.length + decksRu.length + decksRofl.length;
+ var decksQuantity = decksEng.length + decksRu.length + decksRofl.length + luckItems.length;
  var decks = [];
 
+ var isRuDecks = true;
+ var isEndDecks = true;
  var isRofls = false;
- var isEndDecks = false;
+ var isLuckItems = false;
+ var isUpkeepLuckItems = false;
 
 window.onload = function() {
-    decks = [...decksRu];
+    document.querySelector("#isRuDecks").checked = isRuDecks;
+    document.querySelector("#isEndDecks").checked = isEndDecks;
+    // document.querySelector("#isRofls").checked = isRofls;
+    document.querySelector("#isLuckItems").checked = isLuckItems;
+    document.querySelector("#isUpkeepLuckItems").checked = isUpkeepLuckItems;
+    reRender();
+};
+
+function reRender() {
+    decks = [];
+    if (isRuDecks) {
+        decks.push(...decksRu);
+    }
     if (isRofls) {
         decks.push(...decksRofl);
     }
     if (isEndDecks) {
         decks.push(...decksEng);
     }
+    if (isLuckItems) {
+        decks.push(...luckItems);
+    }
+    if (isUpkeepLuckItems) {
+        decks.push(...upkeepLuckItems);
+    }
+
     decksQuantity = decks.length;
 
     initDrawingCanvas();
@@ -64,14 +86,16 @@ window.onload = function() {
   }
   
   shuffle(randoms);
-};
+}
 
 function redraw() {
-    isRofls = document.querySelector("#isRofls").checked;
+    isRuDecks = document.querySelector("#isRuDecks").checked;
+    isLuckItems = document.querySelector("#isLuckItems").checked;
+    // isRofls = document.querySelector("#isRofls").checked;
     isEndDecks = document.querySelector("#isEndDecks").checked;
-    console.log(isRofls, isEndDecks);
+    isUpkeepLuckItems = document.querySelector("#isUpkeepLuckItems").checked;
 
-    window.onload();
+    reRender();
 }
 
 function initDrawingCanvas() {
@@ -230,13 +254,18 @@ function loop() {
     requestAnimationFrame(loop);
 }
 
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length; i; i--) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j];
-        a[j] = x;
+function shuffle(array) {
+    let currentIndex = array.length;
+
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
     }
 }
 
@@ -311,21 +340,85 @@ Wheel.prototype = {
 
         ctx.rotate(-this.body.angle);
       
-        var colors = ['#db7fb7','#db7fb7','#db7fb7',
-                     '#BFBB11','#BFBB11',
-                     '#C93C00','#C93C00',
-                     '#FFC200','#FFC200',
-                     '#018EE8','#018EE8',
-                     '#db7fb7','#db7fb7',
-                     '#BFBB11','#BFBB11',
-                     '#C93C00','#C93C00',
-                     '#FFC200','#FFC200',
-                     '#018EE8','#018EE8',
-                     '#db7fb7','#db7fb7',
+        var colors = ['#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
                       
-                     '#BFBB11','#BFBB11',
-                     '#C93C00','#C93C00',
-                     '#FFC200','#FFC200',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                      
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                      
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                      
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                      
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                      
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
+                     '#018EE8',
+                     '#db7fb7',
+                      
+                     '#BFBB11',
+                     '#C93C00',
+                     '#FFC200',
                      '#018EE8',
                      '#db7fb7',
                      '#BFBB11',
