@@ -1,56 +1,14 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" /> 
-    <link rel="stylesheet" href="styles.css">
-    <script src="decks_en.txt"></script>
-    <script src="decks_ru.txt"></script>
-    <script src="decks_with_rofls.txt"></script>
-    <script src="luck_items.txt"></script>
-    <script src="upkeep_luck.txt"></script>
-    <title>Choose Your Deck</title>
-  </head>
-  <body>
-    <div id="container" class="centered">
-        <canvas id="drawing_canvas"></canvas>
-        <div id="status_label" style="display:none;">loading...</div>
-    </div>
-    <div class="sticky-box">
-      <div class="input-container">
-        <form class="check-boxes">
-            <!-- <label >
-              <input id="isRofls" type="checkbox" onclick="redraw()">
-              Рофляные Деки
-            </label>
-            <br> -->
-            <label >
-              <input id="isRuDecks" type="checkbox" onclick="redraw()">
-              Русские
-            </label>
-            <br>
-            <label>
-              <input id="isEndDecks" type="checkbox" onclick="redraw()">
-              Английские
-            </label>
-            <br>
-            <label>
-              <input id="isLuckItems" type="checkbox" onclick="redraw()">
-              Баффы/Дебаффы
-            </label>
-            <br>
-            <label>
-              <input id="isUpkeepLuckItems" type="checkbox" onclick="redraw()">
-              Шаг поддержки
-            </label>
-            <br>
-          </form>
-          <button class="button" onclick="redraw()">Крутить</button>
-      </div>
-    </div>
-    
-
-    <script src="./external/wheel-script.js"></script>
-    <script src="./scripts.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MtgMultitoolApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <app-root></app-root>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
 </html>
